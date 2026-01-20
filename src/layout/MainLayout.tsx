@@ -3,9 +3,9 @@ import Sidebar from "../components/Sidebar";
 
 const MainLayout = () => {
     return(
-        <div className="h-screen bg-black p-10 text-cyan-900" id="background">
+        <div className="h-screen bg-black p-10 text-cyan-800" id="background">
 
-            <div className="border border-cyan-900 h-full p-16 flex flex-row justify-between">
+            <div className="border border-cyan-800 h-full p-10 flex flex-row justify-between">
 
                 {/* Sidebar */}
                 <aside>
@@ -13,7 +13,7 @@ const MainLayout = () => {
                 </aside>
 
                 {/* Contenido */}
-                <main>
+                <main className="flex items-end text-right">
                     <Outlet/>
                 </main>
             </div>
