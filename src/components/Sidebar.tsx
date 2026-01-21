@@ -9,7 +9,7 @@ const Sidebar = () => {
                 <div className="text-5xl" id="Title">
                     Redwin Valverde Castro
                 </div>
-                <div id="Subtitle">
+                <div className="font-semibold" id="Subtitle">
                     Desarrollador Frontend
                 </div>
            </div>
@@ -18,13 +18,13 @@ const Sidebar = () => {
             <nav className="flex flex-col">
                 <NavLink 
                     to="/" 
-                    className="w-fit">
+                    className="w-fit font-semibold">
                     
                     Home
                 </NavLink>
                 <NavLink 
-                    to="/Projects"
-                    className="w-fit">
+                  to="/Projects"
+                  className="w-fit font-semibold">
                     
                     Proyectos
                 </NavLink>

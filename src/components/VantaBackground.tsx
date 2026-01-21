@@ -25,7 +25,7 @@ const VantaBackground = () => {
         color: 0x155e69,
         color2: 0xffffff,
 
-        size: 0.5,
+        size: 0.8,
       })
     }
 
