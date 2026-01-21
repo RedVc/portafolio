@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
     return(
-        <div id="Sidebar">
+        <div className="select-none" id="Sidebar">
            
            {/* Titles */}
             <div className="mb-10" id="Titles">
@@ -16,10 +16,16 @@ const Sidebar = () => {
 
            {/* Sidebar */}
             <nav className="flex flex-col">
-                <NavLink to="/">
+                <NavLink 
+                    to="/" 
+                    className="w-fit">
+                    
                     Home
                 </NavLink>
-                <NavLink to="/Projects">
+                <NavLink 
+                    to="/Projects"
+                    className="w-fit">
+                    
                     Proyectos
                 </NavLink>
             </nav>
