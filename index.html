@@ -5,7 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="/portafolio/assets/holownai-fotor-20260120144458-B4-6y4o3.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
-    <script type="module" crossorigin src="/portafolio/assets/index-Dk6-oUqo.js"></script>
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const path = params.get("p");
+        if (path) {
+          window.history.replaceState(null, "", path);
+        }
+      })();
+    </script>
+
+    <script type="module" crossorigin src="/portafolio/assets/index-DL0JBALY.js"></script>
     <link rel="stylesheet" crossorigin href="/portafolio/assets/index-BI8pavOf.css">
   </head>
   <body>
