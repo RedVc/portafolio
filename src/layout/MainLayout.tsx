@@ -1,8 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import VantaBackground from "../components/VantaBackground";
+// import { useState } from "react";
+
 
 const MainLayout = () => {
+  // const [mouseEnabled, setMouseEnabled] = useState(true);
+
   return (
     <div className="h-screen bg-black p-10 text-cyan-800">
 
@@ -11,6 +15,9 @@ const MainLayout = () => {
         {/* Fondo animado */}
         <div className="absolute inset-0 z-0">
           <VantaBackground />
+
+          {/* Overlay oscuro */}
+          <div className="absolute inset-0 bg-black/70 pointer-events-none" />
         </div>
 
         {/* Contenido */}

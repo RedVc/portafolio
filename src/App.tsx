@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/portafolio">
         <Routes>
           
           {/* Plantilla principal y sus path */}

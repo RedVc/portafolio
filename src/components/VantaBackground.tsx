@@ -1,49 +1,49 @@
 import { useEffect, useRef } from "react"
 import * as THREE from "three"
-import GLOBE from "vanta/dist/vanta.globe.min"
+import NET from "vanta/src/vanta.net"
+
+type VantaEffect = {
+  destroy: () => void
+}
 
 const VantaBackground = () => {
-  
   const vantaRef = useRef<HTMLDivElement | null>(null)
-  const vantaEffect = useRef<{ destroy: () => void } | null>(null)
+  const vantaEffect = useRef<VantaEffect | null>(null)
 
   useEffect(() => {
     if (!vantaEffect.current && vantaRef.current) {
-      vantaEffect.current = GLOBE({
+      vantaEffect.current = NET({
         el: vantaRef.current,
         THREE,
-        mouseControls: false,
-        touchControls: false,
+        mouseControls: true,
+        touchControls: true,
         gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
+        minHeight: 200,
+        minWidth: 200,
+        scale: 1,
+        scaleMobile: 1,
 
-        // Colores de la web
+        color: 0x028f77,
         backgroundColor: 0x0,
-        color: 0x155e69,
-        color2: 0xffffff,
-
-        size: 0.8,
+        points: 8,
+        maxDistance: 20,
+        spacing: 16,
+        showDots: true,
       })
     }
 
     return () => {
-      if (vantaEffect.current) {
-        vantaEffect.current.destroy()
-        vantaEffect.current = null
-      }
+      vantaEffect.current?.destroy()
+      vantaEffect.current = null
     }
   }, [])
 
   return (
     <div
       ref={vantaRef}
-      className="w-full h-full"
+      className="absolute inset-0 -z-10"
     />
   )
 }
 
 export default VantaBackground
-

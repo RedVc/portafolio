@@ -1,11 +1,9 @@
-declare module "vanta/dist/vanta.globe.min" {
-  export interface VantaEffect {
-    destroy: () => void
-  }
+declare module "vanta/src/vanta.net" {
+  import type * as THREE from "three"
 
-  export interface VantaOptions {
-    el: HTMLElement | null
-    THREE?: typeof import("three")
+  interface VantaNetOptions {
+    el: HTMLElement
+    THREE: typeof THREE
     mouseControls?: boolean
     touchControls?: boolean
     gyroControls?: boolean
@@ -13,13 +11,23 @@ declare module "vanta/dist/vanta.globe.min" {
     minWidth?: number
     scale?: number
     scaleMobile?: number
+
     color?: number
-    color2?: number
+    lineColor?: number
     backgroundColor?: number
-    size?: number
+    points?: number
+    maxDistance?: number
+    spacing?: number
+    showDots?: boolean
   }
 
-  const GLOBE: (options: VantaOptions) => VantaEffect
-  export default GLOBE
+  interface VantaEffect {
+    destroy: () => void
+  }
+
+  export default function NET(
+    options: VantaNetOptions
+  ): VantaEffect
 }
+
 
