@@ -5,8 +5,11 @@ import NET from "vanta/src/vanta.net"
 type VantaEffect = {
   destroy: () => void
 }
+type VantaBackgroundProps = {
+  mouseControls: boolean,
+}
 
-const VantaBackground = () => {
+const VantaBackground = ({ mouseControls }: VantaBackgroundProps) => {
   const vantaRef = useRef<HTMLDivElement | null>(null)
   const vantaEffect = useRef<VantaEffect | null>(null)
 
@@ -15,9 +18,9 @@ const VantaBackground = () => {
       vantaEffect.current = NET({
         el: vantaRef.current,
         THREE,
-        mouseControls: true,
+        mouseControls,
         touchControls: true,
-        gyroControls: false,
+        gyroControls: true,
         minHeight: 200,
         minWidth: 200,
         scale: 1,
@@ -26,8 +29,8 @@ const VantaBackground = () => {
         color: 0x028f77,
         backgroundColor: 0x0,
         points: 8,
-        maxDistance: 20,
-        spacing: 16,
+        maxDistance: 12,
+        spacing: 10,
         showDots: true,
       })
     }
@@ -36,7 +39,7 @@ const VantaBackground = () => {
       vantaEffect.current?.destroy()
       vantaEffect.current = null
     }
-  }, [])
+  }, [ mouseControls ])
 
   return (
     <div

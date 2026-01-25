@@ -6,7 +6,7 @@ const Sidebar = () => {
            
            {/* Titles */}
             <div className="mb-10" id="Titles">
-                <div className="text-5xl" id="Title">
+                <div className="text-5xl font-semibold" id="Title">
                     Redwin Valverde Castro
                 </div>
                 <div className="font-semibold" id="Subtitle">
