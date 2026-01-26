@@ -20,7 +20,7 @@ const Sidebar = () => {
                     to="/" 
                     className="w-fit font-semibold">
                     
-                    Home
+                    Inicio
                 </NavLink>
                 <NavLink 
                   to="/Projects"

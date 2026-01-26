@@ -28,15 +28,6 @@ const MainLayout = () => {
               <Sidebar />
             </aside>
 
-            <label className="flex items-center gap-2 text-sm cursor-pointer select-none w-fit">
-              <input
-                type="checkbox"
-                checked={mouseEnabled}
-                onChange={(e) => setMouseEnabled(e.target.checked)}
-                className="accent-cyan-700 p-14"
-              />
-              Movimiento con mouse
-            </label>
           </div>
 
           <main className="flex items-end text-right">
@@ -46,6 +37,24 @@ const MainLayout = () => {
 
         </div>
 
+            <label className="flex items-center gap-2 text-sm cursor-pointer select-none w-fit relative z-11">
+              <input
+                type="checkbox"
+                checked={mouseEnabled}
+                onChange={(e) => setMouseEnabled(e.target.checked)}
+                className="accent-cyan-700 p-14"
+              />
+              Movimiento con mouse
+            </label>
+            {/* <label className="flex items-center gap-2 text-sm cursor-pointer select-none w-fit relative z-11">
+              <input
+                type="checkbox"
+                checked={languajeEnabled}
+                onChange={(e) => setLanguaje(e.target.checked)}
+                className="accent-cyan-700 p-14"
+              />
+              esp, ing
+            </label> */}
 
       </div>
 
