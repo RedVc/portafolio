@@ -10,16 +10,22 @@ import VantaBackground from "../components/VantaBackground";
 
 const MainLayout = () => {
   const [mouseEnabled, setMouseEnabled] = useState(true);
+  const [mouseApplied, setMouseApplied] = useState(true);
+  const [fading, setFading] = useState(false);
   const { t, i18n } = useTranslation();
 
   return (
     <div className="min-h-screen bg-black text-gray-300 flex flex-col p-10">
 
-      <div className="relative border border-cyan-800 flex-1 p-10 overflow-hidden flex flex-col">
+      <div
+        className={`relative border border-cyan-800 flex-1 p-10 overflow-hidden flex flex-col
+        transition-opacity duration-700
+        ${fading ? "opacity-0" : "opacity-100"}`}
+       >
 
         {/* Fondo animado */}
         <div className="absolute inset-0 z-0">
-          <VantaBackground mouseControls={mouseEnabled} />
+          <VantaBackground mouseControls={mouseApplied} />
 
           {/* Overlay oscuro */}
           <div className="absolute inset-0 bg-black/70 pointer-events-none" />
@@ -40,17 +46,24 @@ const MainLayout = () => {
 
         </div>
 
+        {/* Seguimiento de mouse */}
         <div>
-          <label className="flex items-center gap-2 text-sm cursor-pointer select-none w-fit relative z-11">
+          <label className="flex items-center gap-2 text-sm cursor-pointer select-none w-fit relative z-11 mb-1">
             <input
               type="checkbox"
               checked={mouseEnabled}
-              onChange={(e) => setMouseEnabled(e.target.checked)
-                
-              }
-              className="accent-cyan-700 p-14"
+              onChange={(e) => {
+                setMouseEnabled(e.target.checked);
+
+                setFading(true);
+
+                setTimeout(() => {
+                  setMouseApplied(e.target.checked);
+                  setFading(false);
+                }, 300);
+              }}
+              className="accent-cyan-800"
             />
-            {/* Movimiento */}
             {t("layout.mouse")}
           </label>
 
@@ -66,7 +79,7 @@ const MainLayout = () => {
                   name="language"
                   checked={i18n.language === lang.code}
                   onChange={ () => i18n.changeLanguage(lang.code) }
-                  className="cursor-pointer"
+                  className="cursor-pointer accent-cyan-800"
                 />
                 <p className={ i18n.language === lang.code ? "font-bold" : ""}>
                   {lang.label}
