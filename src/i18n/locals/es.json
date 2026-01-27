@@ -1,0 +1,12 @@
+{
+  "layout": {
+    "mouse": "Seguimiento de movimiento",
+    "languaje": "Español"
+  },
+  "sidebar": {
+    "subtitle": "Desarrollador Frontend",
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  }
+}

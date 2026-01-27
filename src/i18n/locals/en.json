@@ -1,0 +1,12 @@
+{
+  "layout": {
+    "mouse": "Motion tracking",
+    "languaje": "English"
+  },
+  "sidebar": {
+    "subtitle": "Frontend Developer",
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}
