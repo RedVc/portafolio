@@ -15,10 +15,10 @@ const MainLayout = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-black text-gray-300 flex flex-col p-10">
+    <div className="min-h-screen bg-black text-gray-300 flex flex-col p-6">
 
       <div
-        className={`relative border border-cyan-800 flex-1 p-10 overflow-hidden flex flex-col
+        className={`relative border border-cyan-950 flex-1 p-10 overflow-hidden flex flex-col
         transition-opacity duration-700
         ${fading ? "opacity-0" : "opacity-100"}`}
        >
@@ -79,7 +79,7 @@ const MainLayout = () => {
                   name="language"
                   checked={i18n.language === lang.code}
                   onChange={ () => i18n.changeLanguage(lang.code) }
-                  className="cursor-pointer accent-cyan-800"
+                  className="cursor-pointer"
                 />
                 <p className={ i18n.language === lang.code ? "font-bold" : ""}>
                   {lang.label}

@@ -31,7 +31,7 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar */}
-      <nav className="relative grid">
+      <nav className="relative grid w-fit">
         
         {/* Indicador */}
         <span
