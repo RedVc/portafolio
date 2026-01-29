@@ -19,7 +19,8 @@ const MainLayout = () => {
 
       <div
         className={`relative border border-cyan-950 flex-1 md:p-10 p-3 overflow-hidden flex flex-col transition-opacity duration-700 
-        ${fading ? "opacity-0" : "opacity-100"}`}
+        ${fading ? "opacity-0" : "opacity-100"}`
+        }
        >
 
         {/* Fondo animado */}
@@ -59,7 +60,7 @@ const MainLayout = () => {
                 setTimeout(() => {
                   setMouseApplied(e.target.checked);
                   setFading(false);
-                }, 300);
+                }, 500);
               }}
               className="accent-cyan-800"
             />
@@ -77,7 +78,15 @@ const MainLayout = () => {
                   type="radio" 
                   name="language"
                   checked={i18n.language === lang.code}
-                  onChange={ () => i18n.changeLanguage(lang.code) }
+                  onChange={ () => { 
+                    setFading(true);
+                    
+                    setTimeout(() => {
+                      i18n.changeLanguage(lang.code)
+                      setFading(false);
+                    }, 500);
+                    
+                  }}
                   className="cursor-pointer"
                 />
                 <p className={ i18n.language === lang.code ? "font-bold" : "" }>
@@ -89,7 +98,7 @@ const MainLayout = () => {
         </div>
       </div>
 
-      <div className="text-sm font-bold mt-2">
+      <div className="text-sm font-bold mt-2 ml-3 md:ml-0">
         © Redwin Valverde Castro
       </div>
     </div>
