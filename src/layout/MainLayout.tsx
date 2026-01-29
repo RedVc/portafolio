@@ -15,11 +15,10 @@ const MainLayout = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-black text-gray-300 flex flex-col p-6">
+    <div className="min-h-screen bg-black text-gray-300 flex flex-col md:p-10 p-1">
 
       <div
-        className={`relative border border-cyan-950 flex-1 p-10 overflow-hidden flex flex-col
-        transition-opacity duration-700
+        className={`relative border border-cyan-950 flex-1 md:p-10 p-3 overflow-hidden flex flex-col transition-opacity duration-700 
         ${fading ? "opacity-0" : "opacity-100"}`}
        >
 
@@ -28,11 +27,11 @@ const MainLayout = () => {
           <VantaBackground mouseControls={mouseApplied} />
 
           {/* Overlay oscuro */}
-          <div className="absolute inset-0 bg-black/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/80 pointer-events-none" />
         </div>
 
         {/* Contenido */}
-        <div className="relative z-10 flex flex-row justify-between flex-1">
+        <div className="relative z-10 flex md:flex-row flex-col justify-between flex-1 ">
           
           <div className="flex flex-col justify-between">
             <aside>
@@ -40,7 +39,7 @@ const MainLayout = () => {
             </aside>
           </div>
 
-          <main className="flex items-end text-right">
+          <main className="flex items-end md:text-right select-none pb-6">
             <Outlet />
           </main>
 
@@ -81,7 +80,7 @@ const MainLayout = () => {
                   onChange={ () => i18n.changeLanguage(lang.code) }
                   className="cursor-pointer"
                 />
-                <p className={ i18n.language === lang.code ? "font-bold" : ""}>
+                <p className={ i18n.language === lang.code ? "font-bold" : "" }>
                   {lang.label}
                 </p>
               </label>
@@ -93,7 +92,6 @@ const MainLayout = () => {
       <div className="text-sm font-bold mt-2">
         © Redwin Valverde Castro
       </div>
-
     </div>
   )
 }

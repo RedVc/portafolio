@@ -17,7 +17,8 @@ const Sidebar = () => {
     
     // activeindex
     const activeIndex = links.findIndex( 
-        link => location.pathname === link.to
+        link => location.pathname.endsWith(link.to)
+        // link => location.pathname === link.to
     );
     const safeIndex = activeIndex === -1 ? 0 : activeIndex;
 
@@ -31,11 +32,11 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar */}
-      <nav className="relative grid w-fit">
+      <nav className="relative grid w-fit content-center">
         
         {/* Indicador */}
         <span
-          className="absolute left-0 flex h-[44px] w-6 items-center justify-center text-cyan-600 transition-transform duration-500"
+          className="absolute left-0 flex h-[44px] w-6 items-center justify-center text-cyan-600 transition-transform duration-500 text-2xl animate-pulse"
           style={{
             transform: `translateY(${safeIndex * ITEM_HEIGHT}px)`
           }}
@@ -49,7 +50,7 @@ const Sidebar = () => {
             to={to}
             end={end}
             className={({ isActive }) =>
-              `h-[44px] pl-8 flex items-center transition-all
+              `h-[44px] pl-7 flex items-center transition-all 
                ${isActive ? "font-bold" : "opacity-70"}`
             }
           >
