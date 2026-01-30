@@ -47,7 +47,7 @@ const MainLayout = () => {
         </div>
 
         {/* Seguimiento de mouse */}
-        <div>
+        <div className="md:flex md:flex-col md:items-end">
           <label className="flex items-center gap-2 text-sm cursor-pointer select-none w-fit relative z-11 mb-1">
             <input
               type="checkbox"
