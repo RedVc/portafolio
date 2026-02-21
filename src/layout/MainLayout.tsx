@@ -15,7 +15,7 @@ const MainLayout = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-black text-gray-300 flex flex-col md:p-10 p-1">
+    <div className="min-h-screen bg-black text-gray-300 flex flex-col md:p-10 p-1 text-xs md:text-base">
 
       <div
         className={`relative border border-cyan-950 flex-1 md:p-10 p-3 overflow-hidden flex flex-col transition-opacity duration-700 
@@ -34,7 +34,7 @@ const MainLayout = () => {
         {/* Contenido */}
         <div className="relative z-10 flex md:flex-row flex-col justify-between flex-1 ">
           
-          <div className="flex flex-col justify-between">
+          <div>
             <aside>
               <Sidebar />
             </aside>
@@ -46,9 +46,17 @@ const MainLayout = () => {
 
         </div>
 
+      </div>
+
+      <div className="flex justify-between m-2">
+
+        <div className="">
+          © Redwin Valverde Castro
+        </div>
+
         {/* Seguimiento de mouse */}
         <div className="md:flex md:flex-col md:items-end">
-          <label className="flex items-center gap-2 text-sm cursor-pointer select-none w-fit relative z-11 mb-1">
+          <label className="flex items-center gap-2 cursor-pointer select-none w-fit relative z-11 mb-1">
             <input
               type="checkbox"
               checked={mouseEnabled}
@@ -68,7 +76,7 @@ const MainLayout = () => {
           </label>
 
           {/* Cambio de idioma */}
-          <div className="flex items-center gap-4 text-sm select-none relative z-11">
+          <div className="flex gap-4 select-none relative z-11">
             {LANGUAGES.map((lang) => (
               <label 
                 key={lang.code}
@@ -97,10 +105,7 @@ const MainLayout = () => {
           </div>
         </div>
       </div>
-
-      <div className="text-sm font-bold mt-2 ml-3 md:ml-0">
-        © Redwin Valverde Castro
-      </div>
+      
     </div>
   )
 }

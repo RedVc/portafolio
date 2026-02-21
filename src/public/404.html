@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Redirecting...</title>
+
     <script>
-      var path = window.location.pathname;
-      var repo = "/portafolio";
-      window.location.replace(repo + "/?p=" + path.replace(repo, ""));
+      // GitHub Pages SPA redirect
+      const repo = '/portafolio';
+      const path = location.pathname.replace(repo, '');
+      const search = location.search;
+      const hash = location.hash;
+
+      location.replace(
+        repo + '/#' + path + search + hash
+      );
     </script>
   </head>
   <body></body>

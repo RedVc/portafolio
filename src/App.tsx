@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/portafolio">
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           
           {/* Plantilla principal y sus path */}
