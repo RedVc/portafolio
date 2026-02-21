@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.display-none {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .maw\:display-none {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:display-none {
+        display: none;
+    }
+}

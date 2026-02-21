@@ -15,10 +15,10 @@ const MainLayout = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-black text-gray-300 flex flex-col md:p-10 p-1 text-xs md:text-base">
+    <div className="min-h-svh bg-black text-gray-300 flex flex-col md:p-10 md:pb-0 p-1 text-xs md:text-base">
 
       <div
-        className={`relative border border-cyan-950 flex-1 md:p-10 p-3 overflow-hidden flex flex-col transition-opacity duration-700 
+        className={`relative border border-cyan-950 flex-1 md:p-10 p-5 overflow-hidden flex flex-col transition-opacity duration-700 
         ${fading ? "opacity-0" : "opacity-100"}`
         }
        >
@@ -32,7 +32,7 @@ const MainLayout = () => {
         </div>
 
         {/* Contenido */}
-        <div className="relative z-10 flex md:flex-row flex-col justify-between flex-1 ">
+        <div className="relative z-10 flex lg:flex-row flex-col justify-between flex-1 gap-2">
           
           <div>
             <aside>
@@ -40,8 +40,8 @@ const MainLayout = () => {
             </aside>
           </div>
 
-          <main className="flex items-end md:text-right select-none pb-6">
-            <Outlet />
+          <main className="flex items-end justify-center select-none text-center">
+              <Outlet />
           </main>
 
         </div>

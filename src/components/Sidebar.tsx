@@ -1,21 +1,18 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useLinks } from "../links/links";
 
 const Sidebar = () => {
 
   const { t } = useTranslation();
 
-  const links = [
-    { to: "/", label: t("sidebar.home"), end: true },
-    { to: "/Projects", label: t("sidebar.projects") },
-    { to: "/Contact", label: t("sidebar.contact") },
-  ];
+  const links = useLinks();
 
   return (
     <div className="select-none">
       
       {/* Titles */}
-      <div className="mb-10">
+      <div className="mb-7">
         <div className="text-3xl md:text-5xl">
           Redwin Valverde Castro
         </div>
@@ -25,7 +22,7 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar */}
-      <nav className="grid w-fit content-center gap-2">
+      <nav className="flex lg:w-fit w-full content-center gap-6 lg:flex-col justify-around">
         {links.map(({ to, label, end }) => (
           <NavLink
             key={to}

@@ -28,7 +28,7 @@ const VantaBackground = ({ mouseControls }: VantaBackgroundProps) => {
 
         color: 0x028f77,
         backgroundColor: 0x0,
-        points: 8,
+        points: 6,
         maxDistance: 12,
         spacing: 10,
         showDots: true,
