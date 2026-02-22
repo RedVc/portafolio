@@ -1,6 +1,6 @@
 
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../i18n/languages";
@@ -9,10 +9,19 @@ import Sidebar from "../components/Sidebar";
 import VantaBackground from "../components/VantaBackground";
 
 const MainLayout = () => {
-  const [mouseEnabled, setMouseEnabled] = useState(true);
-  const [mouseApplied, setMouseApplied] = useState(true);
+  const [mouseEnabled, setMouseEnabled] = useState<boolean>(() => {
+    const stored = localStorage.getItem("mouseEnabled");
+    if (stored === null) return true;
+    return stored === "true";
+  });
+  const [mouseApplied, setMouseApplied] = useState<boolean>(mouseEnabled);
   const [fading, setFading] = useState(false);
   const { t, i18n } = useTranslation();
+ 
+  // Se ejecuta cuando mouseEnabled cambia su valor
+  useEffect(() => {
+    localStorage.setItem( "mouseEnabled", String(mouseEnabled) );
+  }, [mouseEnabled]);
 
   return (
     <div className="min-h-svh bg-black text-gray-300 flex flex-col md:p-10 md:pb-0 p-1 text-xs md:text-base">
@@ -61,12 +70,13 @@ const MainLayout = () => {
               type="checkbox"
               checked={mouseEnabled}
               onChange={(e) => {
-                setMouseEnabled(e.target.checked);
+                const checked = e.target.checked;
 
+                setMouseEnabled(checked);
                 setFading(true);
 
                 setTimeout(() => {
-                  setMouseApplied(e.target.checked);
+                  setMouseApplied(checked);
                   setFading(false);
                 }, 500);
               }}
@@ -90,14 +100,15 @@ const MainLayout = () => {
                     setFading(true);
                     
                     setTimeout(() => {
-                      i18n.changeLanguage(lang.code)
+                      i18n.changeLanguage(lang.code);
+                      localStorage.setItem("language", lang.code);
                       setFading(false);
                     }, 500);
                     
                   }}
                   className="cursor-pointer"
                 />
-                <p className={ i18n.language === lang.code ? "font-bold" : "" }>
+                <p>
                   {lang.label}
                 </p>
               </label>
