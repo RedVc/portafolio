@@ -13,7 +13,7 @@ const MainLayout = () => {
   const { currentLanguage, changeLanguage } = useLanguage( setFading );
 
   return (
-    <div className="min-h-svh bg-black text-gray-300 flex flex-col md:p-10 md:pb-0 p-1 text-xs md:text-base">
+    <div className="min-h-svh bg-black text-gray-300 flex flex-col md:p-10 md:pb-0 p-1 text-xs md:text-base min-w-72">
 
       <div
         className={`relative border border-cyan-950 flex-1 md:p-10 p-5 overflow-hidden flex flex-col transition-opacity duration-700 
@@ -30,7 +30,7 @@ const MainLayout = () => {
         </div>
 
         {/* Contenido */}
-        <div className="relative z-10 flex lg:flex-row flex-col justify-between flex-1 gap-2">
+        <div className="relative z-10 flex lg:flex-row flex-col justify-between flex-1 gap-6">
           
           <div>
             <aside>
@@ -38,7 +38,7 @@ const MainLayout = () => {
             </aside>
           </div>
 
-          <main className="flex items-end justify-center select-none text-center">
+          <main className="flex items-end justify-center select-none">
               <Outlet />
           </main>
 

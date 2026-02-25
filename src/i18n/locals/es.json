@@ -8,5 +8,14 @@
     "home": "Inicio",
     "projects": "Proyectos",
     "contact": "Contacto"
+  },
+  "project": {
+    "title": "Experiencia Profesional",
+    "personalTitle": "Proyectos Personales",
+    "visite": "Visitar"
+  },
+  "fz": {
+    "title": "Factura Zen",
+    "desc": "Desarrollador Web"
   }
 }

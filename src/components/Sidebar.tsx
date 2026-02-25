@@ -29,15 +29,19 @@ const Sidebar = () => {
             to={to}
             end={end}
             className={({ isActive }) =>
-              `flex items-center gap-2 h-9 transition-colors
-              ${isActive ? "font-bold" : "opacity-70"}`
+              `flex items-center gap-2 h-9 transition-colors 
+              ${isActive ? "font-bold" : "opacity-70 hover:text-gray-50"}`
             }
           >
             {({ isActive }) => (
               <>
-                <span className="text-cyan-600 left-0 w-3 text-lg md:text-sm animate-pulse">
-                  {isActive && "◕"}
-                </span>
+                {
+                  isActive ?
+                  <span className="text-cyan-600 left-0 w-3 text-lg md:text-sm animate-pulse">
+                    ◕
+                  </span>:
+                  ""
+                }
                 {label}
               </>
             )}

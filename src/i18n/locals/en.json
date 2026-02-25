@@ -8,5 +8,18 @@
     "home": "Home",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "project": {
+    "title": "Professional Experience",
+    "personalTitle": "Personal Projects",
+    "visite": "Visite"
+  },
+  "fz": {
+    "title": "Factura Zen",
+    "desc": "Web Developer"
+  },
+  "fzm": {
+    "title": "Factura Zen Mobile",
+    "desc": "Mobile Developer"
   }
 }
