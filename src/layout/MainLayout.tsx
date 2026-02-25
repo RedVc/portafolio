@@ -26,7 +26,7 @@ const MainLayout = () => {
           <VantaBackground mouseControls={mouseApplied} />
 
           {/* Overlay oscuro */}
-          <div className="absolute inset-0 bg-black/80 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/90 pointer-events-none" />
         </div>
 
         {/* Contenido */}
@@ -38,7 +38,7 @@ const MainLayout = () => {
             </aside>
           </div>
 
-          <main className="flex items-end justify-center select-none">
+          <main className="flex items-end justify-center select-none lg:mr-52">
               <Outlet />
           </main>
 
