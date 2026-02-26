@@ -21,13 +21,13 @@ const ProjectCard = ( { title, desc, links }: ProjectCardProps ) => {
                 {title}
             </p>
 
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-base">
                 {desc}
             </p>
 
             <div className="flex justify-center">
                 {links?.map((linkO) => 
-                    <a href={linkO.link} target="_blank" className="text-gray-400 hover:text-cyan-400 transition p-1 flex flex-row items-center">
+                    <a href={linkO.link} target="_blank" className="text-sm text-gray-400 hover:text-cyan-400 transition m-1 flex flex-row items-center">
                         { linkO.desc ? linkO.desc : t("project.visite") }
                         <ExternalLink size={16} className="pl-1"/>
                     </a>

@@ -23,7 +23,7 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar */}
-      <nav className="flex lg:w-fit w-full content-center gap-6 lg:flex-col justify-around text-sm ">
+      <nav className="flex lg:w-fit w-full content-center gap-6 lg:flex-col justify-around text-sm">
         {links.map(({ to, label, end }) => (
           <NavLink
             key={to}

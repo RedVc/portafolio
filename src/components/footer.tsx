@@ -18,7 +18,7 @@ const Footer = ({
   const { t } = useTranslation();
 
   return (
-    <div className="flex justify-between m-2">
+    <div className="flex justify-between m-2 text-sm">
 
       <div>
         © Redwin Valverde Castro
@@ -32,13 +32,13 @@ const Footer = ({
             type="checkbox"
             checked={mouseEnabled}
             onChange={(e) => onToggleMouse(e.target.checked)}
-            className="accent-cyan-800"
+            className="accent-cyan-800 text-sm"
           />
           {t("layout.mouse")}
         </label>
 
         {/* Cambio de idioma */}
-        <div className="flex gap-4 select-none relative z-11">
+        <div className="text-sm flex gap-4 select-none relative z-11">
           {LANGUAGES.map((lang) => (
             <label
               key={lang.code}
