@@ -17,11 +17,11 @@ const ProjectCard = ( { title, desc, links }: ProjectCardProps ) => {
     const { t } = useTranslation();
     return(
         <div className="pb-3">
-            <p className="text-lg lg:text-2xl font-semibold">
+            <p className="text-base lg:text-xl font-semibold">
                 {title}
             </p>
 
-            <p className="text-sm lg:text-lg text-gray-300">
+            <p className="text-gray-300">
                 {desc}
             </p>
 

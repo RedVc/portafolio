@@ -94,7 +94,7 @@ const Projects = () => {
     return(
         <div>
             <div>
-                <p className="text-2xl lg:text-4xl text-cyan-500 font-semibold">
+                <p className="text-xl lg:text-3xl text-cyan-500 font-semibold">
                     {t("project.title")}
                 </p>
                 {projects.map((pro) => (
@@ -107,7 +107,7 @@ const Projects = () => {
                 ))}
             </div>
             <div>
-                <p className="text-2xl lg:text-4xl text-cyan-500 font-semibold">
+                <p className="text-xl lg:text-3xl text-cyan-500 font-semibold">
                     {t("project.personalTitle")}
                 </p>
                 {personalProjects.map((pro) => (

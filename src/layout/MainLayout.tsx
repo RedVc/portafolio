@@ -13,7 +13,7 @@ const MainLayout = () => {
   const { currentLanguage, changeLanguage } = useLanguage(setFading);
 
   return (
-    <div className="text-xs lg:text-base h-dvh flex flex-col bg-black text-gray-300 min-w-72 overflow-hidden">
+    <div className="text-xs lg:text-base h-dvh flex flex-col bg-black text-gray-300 min-w-72 overflow-hidden lg:p-10 lg:pb-0">
 
       {/* Contenedor principal */}
       <div
@@ -27,14 +27,14 @@ const MainLayout = () => {
           <div className="absolute inset-0 bg-black/90 pointer-events-none" />
         </div>
 
-        <div className="relative z-10 flex-1 flex flex-col xl:flex-row md:p-10 p-5 min-h-0 gap-6">
+        <div className="relative z-10 flex-1 flex flex-col xl:flex-row lg:p-10 p-5 min-h-0 gap-6">
 
           <aside>
             <Sidebar />
           </aside>
 
-          <main className="text-center flex-1 overflow-y-auto over min-h-0 select-none">
-            <div className="xl:h-full flex items-center justify-center">
+          <main className="text-center flex justify-center overflow-y-auto min-h-0 select-none w-full h-full">
+            <div className="my-auto w-full">
               <Outlet />
             </div>
           </main>

@@ -23,7 +23,7 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar */}
-      <nav className="text-sm flex xl:w-fit w-full content-center gap-6 xl:flex-col justify-around">
+      <nav className="text-sm lg:text-base flex xl:w-fit w-full content-center gap-6 xl:flex-col justify-around">
         {links.map(({ to, label, end }) => (
           <NavLink
             key={to}
@@ -31,7 +31,7 @@ const Sidebar = () => {
             end={end}
             className={({ isActive }) =>
               `flex items-center gap-2 h-9 transition-colors 
-              ${isActive ? "text-cyan-400 font-bold transition" : "text-gray-400 hover:text-cyan-400 transition"}`
+              ${isActive ? "text-cyan-500 font-bold transition" : "text-gray-400 hover:text-cyan-500 transition"}`
             }
           >
             {({ isActive }) => (
