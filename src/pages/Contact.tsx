@@ -1,6 +1,7 @@
 import { Github, Instagram, Mail } from "lucide-react";
 import { useState } from "react";
 import Toast from "../components/ui/Toast";
+import { useTranslation } from "react-i18next";
 
 
 
@@ -18,6 +19,8 @@ const Contact = () => {
             setError(false);
         }
     }
+
+    const { t } = useTranslation();
 
     return(
         <div className="w-full flex justify-center items-center flex-col gap-6">
@@ -62,7 +65,7 @@ const Contact = () => {
             </div>
 
             <Toast
-                message={error ? "Copiado" : "Error"}
+                message={error ? t("contact.toastCopy") : t("contact.toastError")}
                 show={showToast}
                 error={error}
                 onClose={() => setShowToast(false)}

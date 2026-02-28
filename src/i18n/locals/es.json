@@ -10,6 +10,10 @@
     "contact": "Contacto",
     "about": "Sobre mí"
   },
+  "contact": {
+    "toastCopy": "Copiado",
+    "toastError": "Error"
+  },
   "project": {
     "title": "Experiencia Profesional",
     "personalTitle": "Proyectos Personales",
