@@ -13,7 +13,7 @@ const MainLayout = () => {
   const { currentLanguage, changeLanguage } = useLanguage(setFading);
 
   return (
-    <div className="h-dvh flex flex-col bg-black text-gray-300 min-w-72 overflow-hidden">
+    <div className="text-xs lg:text-base h-dvh flex flex-col bg-black text-gray-300 min-w-72 overflow-hidden">
 
       {/* Contenedor principal */}
       <div
@@ -27,31 +27,26 @@ const MainLayout = () => {
           <div className="absolute inset-0 bg-black/90 pointer-events-none" />
         </div>
 
-        {/* Contenido encima del fondo */}
-        <div className="relative z-10 flex-1 flex flex-col md:p-10 p-5 min-h-0">
+        <div className="relative z-10 flex-1 flex flex-col xl:flex-row md:p-10 p-5 min-h-0 gap-6">
 
-          {/* Sidebar */}
-          <aside className="mb-6">
+          <aside>
             <Sidebar />
           </aside>
 
-          {/* Scroll SOLO aquí */}
-          <main className="flex-1 overflow-y-auto min-h-0 select-none lg:mr-52">
-            <Outlet />
+          <main className="text-center flex-1 overflow-y-auto over min-h-0 select-none">
+            <div className="xl:h-full flex items-center justify-center">
+              <Outlet />
+            </div>
           </main>
-
         </div>
-
       </div>
 
-      {/* Footer fijo abajo */}
       <Footer
         mouseEnabled={mouseEnabled}
         currentLanguage={currentLanguage}
         onToggleMouse={toggleMouse}
         onChangeLanguage={changeLanguage}
       />
-
     </div>
   );
 };

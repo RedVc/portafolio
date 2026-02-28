@@ -18,7 +18,7 @@ const Footer = ({
   const { t } = useTranslation();
 
   return (
-    <div className="flex justify-between m-2 text-sm">
+    <div className="flex justify-between m-2">
 
       <div>
         © Redwin Valverde Castro
@@ -32,24 +32,24 @@ const Footer = ({
             type="checkbox"
             checked={mouseEnabled}
             onChange={(e) => onToggleMouse(e.target.checked)}
-            className="accent-cyan-800 text-sm"
+            className="accent-cyan-800 w-3"
           />
           {t("layout.mouse")}
         </label>
 
         {/* Cambio de idioma */}
-        <div className="text-sm flex gap-4 select-none relative z-11">
+        <div className="flex gap-4 select-none relative z-11">
           {LANGUAGES.map((lang) => (
             <label
               key={lang.code}
-              className="flex items-center gap-1 cursor-pointer"
+              className="accent-cyan-800 flex items-center gap-1 cursor-pointer"
             >
               <input
                 type="radio"
                 name="language"
                 checked={currentLanguage === lang.code}
                 onChange={() => onChangeLanguage(lang.code)}
-                className="cursor-pointer"
+                className="cursor-pointer w-3"
               />
               <p>{lang.label}</p>
             </label>

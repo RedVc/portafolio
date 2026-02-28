@@ -47,7 +47,7 @@ const Projects = () => {
             ]
         },
         {
-            title: "asdasd",
+            title: "asdasd1",
             desc: "asdasdasd",
             links: [
                 {
@@ -61,7 +61,7 @@ const Projects = () => {
             ]
         },
         {
-            title: "asdasd",
+            title: "asdasd2",
             desc: "asdasdasd",
             links: [
                 {
@@ -75,7 +75,7 @@ const Projects = () => {
             ]
         },
         {
-            title: "asdasd",
+            title: "asdasd3",
             desc: "asdasdasd",
             links: [
                 {
@@ -92,14 +92,14 @@ const Projects = () => {
     ];
 
     return(
-        <div className="text-center">
+        <div>
             <div>
-                <p className="text-cyan-600 font-bold text-2xl md:text-4xl">
+                <p className="text-2xl lg:text-4xl text-cyan-500 font-semibold">
                     {t("project.title")}
                 </p>
                 {projects.map((pro) => (
                     <ProjectCard
-                        key={t(pro.title)}
+                        key={pro.title}
                         title={t(pro.title)}
                         desc={t(pro.desc)}
                         links={pro.links}
@@ -107,12 +107,12 @@ const Projects = () => {
                 ))}
             </div>
             <div>
-                <p className="text-cyan-600 font-bold text-2xl md:text-4xl">
+                <p className="text-2xl lg:text-4xl text-cyan-500 font-semibold">
                     {t("project.personalTitle")}
                 </p>
                 {personalProjects.map((pro) => (
                     <ProjectCard
-                        key={t(pro.title)}
+                        key={pro.title}
                         title={t(pro.title)}
                         desc={t(pro.desc)}
                         links={pro.links}

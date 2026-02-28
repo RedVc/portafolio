@@ -14,16 +14,16 @@ const Sidebar = () => {
       
       {/* Titles */}
       <div className="mb-7">
-        <div className="text-3xl md:text-5xl">
+        <p className="text-3xl lg:text-5xl font-semibold">
           Redwin Valverde Castro
-        </div>
-        <div className="md:text-base">
+        </p>
+        <p>
           {t("sidebar.subtitle")}
-        </div>
+        </p>
       </div>
 
       {/* Sidebar */}
-      <nav className="flex lg:w-fit w-full content-center gap-6 lg:flex-col justify-around text-sm">
+      <nav className="text-sm flex xl:w-fit w-full content-center gap-6 xl:flex-col justify-around">
         {links.map(({ to, label, end }) => (
           <NavLink
             key={to}
@@ -31,15 +31,15 @@ const Sidebar = () => {
             end={end}
             className={({ isActive }) =>
               `flex items-center gap-2 h-9 transition-colors 
-              ${isActive ? "text-cyan-400 font-semibold transition" : "text-gray-400 hover:text-cyan-400 transition"}`
+              ${isActive ? "text-cyan-400 font-bold transition" : "text-gray-400 hover:text-cyan-400 transition"}`
             }
           >
             {({ isActive }) => (
               <>
                 {
                   isActive ?
-                  <Orbit className="text-gray-50 left-0 w-3 text-lg md:text-sm animate-spin" />:
-                  ""
+                  <Orbit className="text-gray-50 left-0 w-3 animate-pulse" />:
+                  <></>
                 }
                 {label}
               </>
