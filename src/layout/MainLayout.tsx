@@ -8,7 +8,7 @@ import { useLanguage } from "../hooks/useLanguage";
 
 const MainLayout = () => {
 
-  const [fading, setFading] = useState(false);
+  const [ fading, setFading ] = useState(false);
   const { mouseEnabled, mouseApplied, toggleMouse } = useMouseControl(setFading);
   const { currentLanguage, changeLanguage } = useLanguage(setFading);
 

@@ -75,16 +75,12 @@ const Projects = () => {
             ]
         },
         {
-            title: "asdasd3",
-            desc: "asdasdasd",
+            title: "Hunger Games (2021)",
+            desc: "Proyecto de final de curso de desarrollo web básico",
             links: [
                 {
-                    link: "asdasdasd",
-                    desc: "Google Play"
-                },
-                {
-                    link: "https://apps.apple.com/cr/app/factura-zen/id1500595487?l=en-GB",
-                    desc: "App Store"
+                    link: "https://hungergamesbyred.web.app/assets/games/generos.html",
+                    desc: ""
                 },
             ]
         },

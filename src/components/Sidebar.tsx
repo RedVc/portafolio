@@ -10,7 +10,7 @@ const Sidebar = () => {
   const links = useLinks();
 
   return (
-    <div className="select-none">
+    <div className="lg:h-full select-none">
       
       {/* Titles */}
       <div className="mb-7">
@@ -23,30 +23,32 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar */}
-      <nav className="text-sm lg:text-base flex xl:w-fit w-full content-center gap-6 xl:flex-col justify-around">
-        {links.map(({ to, label, end }) => (
-          <NavLink
-            key={to}
-            to={to}
-            end={end}
-            className={({ isActive }) =>
-              `flex items-center gap-2 h-9 transition-colors 
-              ${isActive ? "text-cyan-500 font-bold transition" : "text-gray-400 hover:text-cyan-500 transition"}`
-            }
-          >
-            {({ isActive }) => (
-              <>
-                {
-                  isActive ?
-                  <Orbit className="text-gray-50 left-0 w-3 animate-pulse" />:
-                  <></>
-                }
-                {label}
-              </>
-            )}
-          </NavLink>
-        ))}
-      </nav>
+      <div className="">
+        <nav className="text-sm lg:text-base flex xl:w-fit w-full content-center gap-6 xl:flex-col justify-around">
+          {links.map(({ to, label, end }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={end}
+              className={({ isActive }) =>
+                `flex items-center gap-2 h-9 transition-colors 
+                ${isActive ? "text-cyan-500 font-bold transition" : "text-gray-400 hover:text-cyan-500 transition"}`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  {
+                    isActive ?
+                    <Orbit className="text-gray-50 left-0 w-3 animate-pulse" />:
+                    <></>
+                  }
+                  {label}
+                </>
+              )}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
     </div>
   );
 }
