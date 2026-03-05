@@ -12,6 +12,8 @@
     <meta property="og:url" content="https://redwin-dev.web.app" />
     <meta property="og:type" content="website" />
 
+    <link rel="stylesheet" href="src/index.css">
+
     <script>
       (function () {
         const params = new URLSearchParams(window.location.search);
@@ -24,7 +26,11 @@
 
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="loading" class="loading">
+        Loading portfolio...
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

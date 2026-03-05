@@ -61,6 +61,7 @@ const Projects = () => {
                     {t("project.title")}
                 </p>
                 {projects.map((pro) => (
+                    
                     <ProjectCard
                         key={pro.title}
                         title={t(pro.title)}
