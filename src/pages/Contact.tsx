@@ -1,4 +1,4 @@
-import { Github, Instagram, Mail } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import Toast from "../components/ui/Toast";
 import { useTranslation } from "react-i18next";
@@ -29,8 +29,8 @@ const Contact = () => {
                 className="w-fit flex items-center cursor-pointer"
                 onClick={copyToClipboard}
              >
-                <Mail className="text-blue-400 hover:text-blue-500"/>
-                <p className="pl-1 hover:text-blue-400 font-semibold"
+                <Mail className="text-blue-400 hover:text-blue-500 transition"/>
+                <p className="pl-1 hover:text-blue-400 font-semibold transition"
                  >
                     redvc13.03@gmail.com
                 </p>
@@ -40,11 +40,11 @@ const Contact = () => {
             <div 
                 className="w-fit flex items-center cursor-pointer"
              >
-                <Github className="text-blue-800 hover:text-blue-950"/>
+                <Github className="text-blue-800 hover:text-blue-950 transition"/>
                 <a 
                     href="https://github.com/RedVc"
                     target="_blank"
-                    className="pl-1 hover:text-blue-400 font-semibold"
+                    className="pl-1 hover:text-blue-400 font-semibold transition"
                  >
                     Github
                 </a>
@@ -54,13 +54,27 @@ const Contact = () => {
             <div 
                 className="w-fit flex items-center cursor-pointer"
              >
-                <Instagram className="text-pink-700 hover:text-pink-900"/>
+                <Instagram className="text-pink-700 hover:text-pink-900 transition"/>
                 <a 
                     href="https://www.instagram.com/red.vc_/"
                     target="_blank"
-                    className="pl-1 hover:text-pink-400 font-semibold"
+                    className="pl-1 hover:text-pink-400 font-semibold transition"
                  >
                     Instagram
+                </a>
+            </div>
+            
+            {/* LinkedIn */}
+            <div 
+                className="w-fit flex items-center cursor-pointer"
+             >
+                <Linkedin className="text-blue-700 hover:text-blue-900 transition"/>
+                <a 
+                    href="https://www.linkedin.com/in/redwin-valverde-castro-2b8199255/"
+                    target="_blank"
+                    className="pl-1 hover:text-blue-400 font-semibold transition"
+                 >
+                    LinkedIn
                 </a>
             </div>
 

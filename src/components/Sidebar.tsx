@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div className="lg:h-full select-none">
       
       {/* Titles */}
-      <div className="mb-7">
+      <div className="mb-4 lg:mb-14">
         <p className="text-3xl lg:text-5xl font-semibold">
           Redwin Valverde Castro
         </p>

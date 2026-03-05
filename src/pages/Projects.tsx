@@ -33,50 +33,8 @@ const Projects = () => {
     ];
     const personalProjects = [
         {
-            title: "asdasd",
-            desc: "asdasdasd",
-            links: [
-                {
-                    link: "asdasdasd",
-                    desc: "Google Play"
-                },
-                {
-                    link: "https://apps.apple.com/cr/app/factura-zen/id1500595487?l=en-GB",
-                    desc: "App Store"
-                },
-            ]
-        },
-        {
-            title: "asdasd1",
-            desc: "asdasdasd",
-            links: [
-                {
-                    link: "asdasdasd",
-                    desc: "Google Play"
-                },
-                {
-                    link: "https://apps.apple.com/cr/app/factura-zen/id1500595487?l=en-GB",
-                    desc: "App Store"
-                },
-            ]
-        },
-        {
-            title: "asdasd2",
-            desc: "asdasdasd",
-            links: [
-                {
-                    link: "asdasdasd",
-                    desc: "Google Play"
-                },
-                {
-                    link: "https://apps.apple.com/cr/app/factura-zen/id1500595487?l=en-GB",
-                    desc: "App Store"
-                },
-            ]
-        },
-        {
             title: "Hunger Games (2021)",
-            desc: "Proyecto de final de curso de desarrollo web básico",
+            desc: "hg.desc",
             links: [
                 {
                     link: "https://hungergamesbyred.web.app/assets/games/generos.html",
@@ -84,13 +42,22 @@ const Projects = () => {
                 },
             ]
         },
-        
+        {
+            title: "gh.title",
+            desc: "gh.desc",
+            links: [
+                {
+                    link: "https://github.com/RedVc",
+                    desc: ""
+                },
+            ]
+        },
     ];
 
     return(
         <div>
             <div>
-                <p className="text-xl lg:text-3xl text-cyan-500 font-semibold">
+                <p className="text-xl lg:text-3xl text-cyan-500 font-semibold mb-2">
                     {t("project.title")}
                 </p>
                 {projects.map((pro) => (
@@ -103,7 +70,7 @@ const Projects = () => {
                 ))}
             </div>
             <div>
-                <p className="text-xl lg:text-3xl text-cyan-500 font-semibold">
+                <p className="text-xl lg:text-3xl text-cyan-500 font-semibold mb-2">
                     {t("project.personalTitle")}
                 </p>
                 {personalProjects.map((pro) => (

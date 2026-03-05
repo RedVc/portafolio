@@ -1,19 +1,31 @@
-import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/footer";
 import VantaBackground from "../components/VantaBackground";
 import { useMouseControl } from "../hooks/useMouseControl";
 import { useLanguage } from "../hooks/useLanguage";
+import { useTranslation } from "react-i18next";
 
 const MainLayout = () => {
 
   const [ fading, setFading ] = useState(false);
   const { mouseEnabled, mouseApplied, toggleMouse } = useMouseControl(setFading);
   const { currentLanguage, changeLanguage } = useLanguage(setFading);
+  
+  const location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const routeKey = location.pathname === "/" 
+      ? "Home" 
+      : location.pathname.replace("/", "");
+
+    document.title = `${t(`routes.${routeKey}`)} | Redwin Valverde`;
+  }, [location.pathname, i18n.language, t]);
 
   return (
-    <div className="text-xs lg:text-base h-dvh flex flex-col bg-black text-gray-300 min-w-72 overflow-hidden lg:p-10 lg:pb-0">
+    <div className="text-xs lg:text-base h-dvh flex flex-col bg-black text-gray-100 min-w-72 overflow-hidden lg:p-10 lg:pb-0">
 
       {/* Contenedor principal */}
       <div

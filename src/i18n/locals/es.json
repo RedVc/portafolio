@@ -1,4 +1,10 @@
 {
+  "routes": {
+    "Home": "Inicio",
+    "Projects": "Proyectos",
+    "Contact": "Contacto",
+    "About": "Sobre mí"
+  },
   "layout": {
     "mouse": "Seguir movimiento",
     "languaje": "Español"
@@ -26,5 +32,12 @@
   "fzm": {
     "title": "Factura Zen Móvil",
     "desc": "Desarrollador Móvil"
+  },
+  "hg": {
+    "desc": "Proyecto final de curso de desarrollo web básico"
+  },
+  "gh": {
+    "title": "Github Profile",
+    "desc": "Perfil personal de Github en donde subo proyectos que resuelven problemas cotidianos y proyectos de aprendizaje"
   }
 }
