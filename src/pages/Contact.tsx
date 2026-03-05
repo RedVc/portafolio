@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import Toast from "../components/ui/Toast";
 import { useTranslation } from "react-i18next";
@@ -47,20 +47,6 @@ const Contact = () => {
                     className="pl-1 hover:text-blue-400 font-semibold transition"
                  >
                     Github
-                </a>
-            </div>
-
-            {/* instagram */}
-            <div 
-                className="w-fit flex items-center cursor-pointer"
-             >
-                <Instagram className="text-pink-700 hover:text-pink-900 transition"/>
-                <a 
-                    href="https://www.instagram.com/red.vc_/"
-                    target="_blank"
-                    className="pl-1 hover:text-pink-400 font-semibold transition"
-                 >
-                    Instagram
                 </a>
             </div>
             
