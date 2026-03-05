@@ -12,7 +12,6 @@ export const useLinks = (): Links[] => {
   return [
     { to: "/", label: t("sidebar.home"), end: true },
     { to: "/Projects", label: t("sidebar.projects"), end: false },
-    { to: "/About", label: t("sidebar.about"), end: false },
     { to: "/Contact", label: t("sidebar.contact"), end: false },
   ];
 };

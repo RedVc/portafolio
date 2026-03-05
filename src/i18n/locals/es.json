@@ -37,7 +37,16 @@
     "desc": "Proyecto final de curso de desarrollo web básico"
   },
   "gh": {
-    "title": "Github Profile",
-    "desc": "Perfil personal de Github en donde subo proyectos que resuelven problemas cotidianos y proyectos de aprendizaje"
+    "title": "GitHub",
+    "desc": "Perfil personal en donde subo proyectos que resuelven problemas cotidianos y proyectos de aprendizaje"
+  },
+  "home": {
+    "p1": "Nacido en 1999 en Alajuela, Costa Rica",
+    "p2": "Soy un desarrollador de software con experiencia en el desarrollo de aplicaciones web y móviles.",
+    "p3": "Me apasiona la tecnología y siempre estoy buscando aprender nuevas habilidades y mejorar mis conocimientos en el campo de la programación.",
+    "p4": "A lo largo de mi carrera, he trabajado en una variedad de proyectos, desde aplicaciones web hasta aplicaciones móviles, utilizando tecnologías como React y Outsystems.",
+    "p5": "Me gusta enfrentar desafíos técnicos y encontrar soluciones creativas para resolver problemas complejos.",
+    "p6": "Además de mi experiencia técnica, también tengo habilidades en la gestión de proyectos y la colaboración en equipo.",
+    "p7": "Me gusta trabajar en un ambiente de equipo y creo que la comunicación efectiva es clave para el éxito de cualquier proyecto."
   }
 }

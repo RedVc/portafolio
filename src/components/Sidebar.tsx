@@ -32,14 +32,14 @@ const Sidebar = () => {
               end={end}
               className={({ isActive }) =>
                 `flex items-center gap-2 h-9 transition-colors 
-                ${isActive ? "text-cyan-500 font-bold transition" : "text-gray-400 hover:text-cyan-500 transition"}`
+                ${isActive ? "font-bold transition" : "text-gray-400 hover:text-cyan-500 transition"}`
               }
             >
               {({ isActive }) => (
                 <>
                   {
                     isActive ?
-                    <Orbit className="text-gray-50 left-0 w-3 animate-pulse" />:
+                    <Orbit className="text-cyan-500 left-0 w-4 animate-pulse" />:
                     <></>
                   }
                   {label}

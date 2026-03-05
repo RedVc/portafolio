@@ -25,11 +25,11 @@ const MainLayout = () => {
   }, [location.pathname, i18n.language, t]);
 
   return (
-    <div className="text-xs lg:text-base h-dvh flex flex-col bg-black text-gray-100 min-w-72 overflow-hidden lg:p-10 lg:pb-0">
+    <div className="text-xs lg:text-base h-dvh min-h-96 flex flex-col bg-black text-gray-100 min-w-72 overflow-hidden lg:p-10 lg:pb-0">
 
       {/* Contenedor principal */}
       <div
-        className={`relative flex-1 border border-cyan-950 flex flex-col overflow-hidden transition-opacity duration-700
+        className={`relative flex-1 border border-gray-700 flex flex-col overflow-hidden transition-opacity duration-700
         ${fading ? "opacity-0" : "opacity-100"}`}
       >
 
