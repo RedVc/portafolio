@@ -33,21 +33,21 @@ const Projects = () => {
     ];
     const personalProjects = [
         {
-            title: "Hunger Games (2021)",
-            desc: "hg.desc",
-            links: [
-                {
-                    link: "https://hungergamesbyred.web.app/assets/games/generos.html",
-                    desc: ""
-                },
-            ]
-        },
-        {
             title: "gh.title",
             desc: "gh.desc",
             links: [
                 {
                     link: "https://github.com/RedVc",
+                    desc: ""
+                },
+            ]
+        },
+        {
+            title: "Hunger Games (2021)",
+            desc: "hg.desc",
+            links: [
+                {
+                    link: "https://hungergamesbyred.web.app/assets/games/generos.html",
                     desc: ""
                 },
             ]
