@@ -45,7 +45,14 @@ const MainLayout = () => {
             <Sidebar />
           </aside>
 
-          <main className="text-center flex justify-center overflow-y-auto min-h-0 select-none w-full h-full">
+          <main className="text-center flex justify-center overflow-y-auto min-h-0 select-none w-full h-full
+
+            scrollbar-thin
+            scrollbar-track-transparent
+            scrollbar-thumb-transparent
+            hover:scrollbar-thumb-cyan-700
+            transition-colors
+            ">
             <div className="my-auto w-full">
               <Outlet />
             </div>
