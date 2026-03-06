@@ -21,7 +21,7 @@ const Footer = ({
   // Obtiene el valor de mouseEnabled
   const [visibleOptions, setVisibleOptions] = useState<boolean>(() => {
     const stored = localStorage.getItem("visibleOptions");
-    if (stored === null) return false;
+    if (stored === null) return true;
     return stored === "true";
   });
 
