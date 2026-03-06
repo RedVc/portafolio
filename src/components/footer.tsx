@@ -31,7 +31,7 @@ const Footer = ({
 
   return (
     <div className="flex justify-between m-1 select-none">
-      <div className="text-gray-400 h-fit flex gap-1 items-center ">
+      <div className="text-gray-400 mt-1 mb-1 h-fit flex gap-1 items-center ">
         <Copyright size={16} />
         <p>Redwin Valverde Castro</p>
       </div>

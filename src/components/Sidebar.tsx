@@ -24,7 +24,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <div className="">
-        <nav className="text-sm lg:text-base flex xl:w-fit w-full content-center gap-6 xl:flex-col justify-around">
+        <nav className="flex xl:w-fit w-full content-center gap-6 xl:flex-col justify-around">
           {links.map(({ to, label, end }) => (
             <NavLink
               key={to}
