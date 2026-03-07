@@ -56,7 +56,7 @@ const Contact = () => {
              >
                 <Linkedin className="text-blue-700 hover:text-blue-900 transition"/>
                 <a 
-                    href="https://www.linkedin.com/in/redwin-valverde-castro-2b8199255/"
+                    href="https://www.linkedin.com/in/redvc/"
                     target="_blank"
                     className="pl-1 hover:text-blue-400 font-semibold transition"
                  >
