@@ -29,8 +29,8 @@ const Contact = () => {
                 className="w-fit flex items-center cursor-pointer"
                 onClick={copyToClipboard}
              >
-                <Mail className="text-blue-400 hover:text-blue-500 transition"/>
-                <p className="pl-1 hover:text-blue-400 font-semibold transition"
+                {<Mail />}
+                <p className="pl-1 hover:text-cyan-500 transition"
                  >
                     redvc13.03@gmail.com
                 </p>
@@ -40,11 +40,11 @@ const Contact = () => {
             <div 
                 className="w-fit flex items-center cursor-pointer"
              >
-                <Github className="text-blue-800 hover:text-blue-950 transition"/>
+                <Github className="text-blue-800 transition"/>
                 <a 
                     href="https://github.com/RedVc"
                     target="_blank"
-                    className="pl-1 hover:text-blue-400 font-semibold transition"
+                    className="pl-1 hover:text-cyan-500 transition"
                  >
                     Github
                 </a>
@@ -54,11 +54,11 @@ const Contact = () => {
             <div 
                 className="w-fit flex items-center cursor-pointer"
              >
-                <Linkedin className="text-blue-700 hover:text-blue-900 transition"/>
+                <Linkedin className="text-blue-700 transition"/>
                 <a 
                     href="https://www.linkedin.com/in/redvc/"
                     target="_blank"
-                    className="pl-1 hover:text-blue-400 font-semibold transition"
+                    className="pl-1 hover:text-cyan-500 transition"
                  >
                     LinkedIn
                 </a>

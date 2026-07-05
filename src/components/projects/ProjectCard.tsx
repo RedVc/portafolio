@@ -21,14 +21,14 @@ const ProjectCard = ( { title, desc, links }: ProjectCardProps ) => {
                 {title}
             </p>
 
-            <p className="text-gray-300 max-w-80 whitespace-pre-line">
+            <p className="text-gray-300 max-w-80 whitespace-pre-line text-sm lg:text-l">
                 {desc}
             </p>
 
             <div className="flex justify-center gap-1">
                 {links?.map((linkO) => 
                     <a href={linkO.link} target="_blank" className="m-1 flex flex-row items-center">
-                        <p className="text-gray-400 hover:text-cyan-400 transition underline">
+                        <p className="hover:text-cyan-400 transition underline text-sm lg:text-l">
                             { linkO.desc ? linkO.desc : t("project.visite") }
                         </p>
                         <ExternalLink size={16} className="pl-1"/>

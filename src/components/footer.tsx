@@ -33,7 +33,9 @@ const Footer = ({
     <div className="flex justify-between m-1 select-none">
       <div className="text-gray-400 mt-1 mb-1 h-fit flex gap-1 items-center ">
         <Copyright size={16} />
-        <p>Redwin Valverde Castro</p>
+        <p className="text-sm">
+          2026 - Redwin Valverde Castro
+        </p>
       </div>
 
       <div>
@@ -74,13 +76,13 @@ const Footer = ({
               </div>
 
               <SquareMinus
-                className="w-4 lg:w-5 text-cyan-500 cursor-pointer"
+                className="w-4 lg:w-5 cursor-pointer"
                 onClick={() => setVisibleOptions(false)}
               />
             </div>
         ) : (
           <SquarePlus
-            className="w-4 lg:w-5 text-cyan-500 cursor-pointer"
+            className="w-4 lg:w-5 cursor-pointer"
             onClick={() => setVisibleOptions(true)}
           />
         )}

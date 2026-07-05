@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Orbit } from "lucide-react";
+// import { Eclipse } from "lucide-react";
 import { useLinks } from "../links/links";
 
 const Sidebar = () => {
@@ -14,7 +14,7 @@ const Sidebar = () => {
       
       {/* Titles */}
       <div className="mb-4 lg:mb-14">
-        <p className="text-3xl lg:text-5xl font-semibold">
+        <p className="text-2xl lg:text-4xl font-semibold">
           Redwin Valverde Castro
         </p>
         <p>
@@ -32,19 +32,19 @@ const Sidebar = () => {
               end={end}
               className={({ isActive }) =>
                 `flex items-center gap-2 h-9 transition-colors 
-                ${isActive ? "font-bold transition" : "text-gray-400 hover:text-cyan-500 transition"}`
+                ${isActive ? "font-bold transition text-cyan-500" : "text-gray-300 hover:text-cyan-500 transition"}`
               }
             >
-              {({ isActive }) => (
+              {/* {({ isActive }) => (
                 <>
                   {
                     isActive ?
-                    <Orbit className="text-cyan-500 left-0 w-4 animate-pulse" />:
+                    <Eclipse className="text-cyan-500 left-0 w-4 animate-pulse" />:
                     <></>
                   }
-                  {label}
                 </>
-              )}
+              )} */}
+              {label}
             </NavLink>
           ))}
         </nav>
